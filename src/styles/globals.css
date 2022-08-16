@@ -15,6 +15,11 @@ p
 {
     font-family: 'Lato';
 }
+/* button */
+.button
+{
+    border-radius: 8px;
+}
 .columns
 {
     margin-top: 0;

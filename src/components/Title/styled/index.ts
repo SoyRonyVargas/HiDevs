@@ -18,4 +18,5 @@ export const TitleStyled = styled("h2")<Props>( props => ({
 })) 
 
 export const TitleH2Styled = styled(TitleStyled)<Props>( props => ({
+
 })) 
