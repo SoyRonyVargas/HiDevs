@@ -2,23 +2,37 @@
     font-family: 'PublicaSans';
     src: url('./fonts/PublicaSansRound-Rg.otf');
 }
+@font-face {
+    font-family: 'PublicaSansMedium';
+    src: url('./fonts/PublicaSansRound-Md.otf');
+}
+
+html
+{
+    font-size: 16px;
+}
 
 h1,
 h2,
 h3,
-h4,
-.button
+h4
 {
     font-family: 'PublicaSans';
 }
+/* .button, */
 p
 {
     font-family: 'Lato';
 }
+.w-100
+{
+    width: 100%;
+}
 /* button */
 .button
 {
-    border-radius: 8px;
+    font-family: 'PublicaSansMedium';
+    border-radius: 10px;
 }
 .columns
 {

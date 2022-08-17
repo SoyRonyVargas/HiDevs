@@ -6,7 +6,7 @@ const fontSizes : PropsSizes = {
     'is-hero': '70px',
     'is-large': '50px',
     'is-medium':  '30px',
-    'is-normal': '20px',
+    'is-normal': '24px',
     'is-small': '10px'
 }
 

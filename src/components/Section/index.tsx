@@ -1,16 +1,24 @@
+import Background from './components/Background'
 import { SectionStyled } from './styled'
 import type { Props } from './types'
-import React from 'react'
+import React , { FC } from 'react'
 
-const Section = ( props : Props ) => {
+const Section : FC<Props> = ( props ) => {
   
     const {
         has_container = true,
-        children
+        background = null,
+        children,
     } = props
 
     return (
     <SectionStyled {...props}>
+        {
+            background &&
+            <Background
+                background={background}
+            />
+        }
         {
             has_container
             ?

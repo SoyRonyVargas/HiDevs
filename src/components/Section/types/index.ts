@@ -1,15 +1,10 @@
+import { GenericTextProps, Sizes , StaticImageNullty } from "../../../../types";
 import React from "react";
 
-export type Spacing = "big" 
-
-export type Props = {
-    children: React.ReactNode
-    has_container: boolean
-    spacing: Spacing
+export type Props = GenericTextProps & {
+    background?: StaticImageNullty
+    children?: React.ReactNode
+    has_container?: boolean
+    spacing?: Sizes
 }
-
-export type PropsSpacing = {
-    [s in Spacing]: string;
-};
-
 

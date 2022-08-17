@@ -19,4 +19,5 @@ const sizes : PropsSizes = {
 export const ParagraphStyled = styled.p<Props>`
     color: ${ props => colors[props.color!] };
     font-size: ${ props => sizes[props.size!] };
+    line-height: 2;
 `
