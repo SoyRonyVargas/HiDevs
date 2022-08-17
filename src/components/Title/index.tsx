@@ -1,7 +1,7 @@
+import useClassName from 'hooks/useClassName'
 import { TitleH2Styled } from './styled'
 import type { Props } from './types'
 import React from 'react'
-
 const Title = ( props : Props ) => {
     
     const {
@@ -9,6 +9,8 @@ const Title = ( props : Props ) => {
         type,
         aling
     } = props
+    
+    const memoizedClassName = useClassName( props , "" )
 
     const titles = {
         h1: TitleH2Styled,
@@ -19,21 +21,11 @@ const Title = ( props : Props ) => {
 
     const TitleSelected = titles[type]
 
-    const getClass = () : string => {
-
-        let classGen = ''
-
-        if( aling )
-        {
-            classGen += aling + " "
-        }
-
-        return classGen
-
-    }
-
     return (
-        <TitleSelected className={getClass()} {...props}>
+        <TitleSelected 
+            className={memoizedClassName} 
+            {...props}
+        >
             { title }
         </TitleSelected>
     )

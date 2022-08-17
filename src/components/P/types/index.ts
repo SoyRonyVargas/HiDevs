@@ -1,11 +1,6 @@
-import React from "react"
+import { GenericTextProps, Sizes } from "../../../../types"
 
-type Sizes = 'is-normal' | 'is-medium'
-type Colors = 'white' | 'gray' | 'big'
-
-export type Props = {
-    children ?: React.ReactNode
+export type Props = GenericTextProps & {
     className ?: string
-    color ?: Colors
     size ?: Sizes
 }

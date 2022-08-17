@@ -25,8 +25,8 @@ const HomeHeroView = () => {
           <div className={`${ classes.column } is-flex-direction-column is-align-items-flex-start	`}>
             <Title 
               title="Lets find Dream Job easy and fast"
+              size="is-hero"
               color='white'
-              size="hero"
               type='h2'
             />
             <Paragraph className='my-5' color="white" size='is-medium' >

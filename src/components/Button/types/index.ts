@@ -1,11 +1,9 @@
-import { ReactChild, ReactChildren } from "react";
+import { GenericTextProps, Sizes, TypesButton } from "../../../../types";
 
-type Sizes = 'is-small' | 'is-normal' | 'is-medium' | 'is-large'
-
-export type Props = {
-    type: 'primary' | 'secondary' | 'transparent'
-    className?: string
+export type Props = GenericTextProps & {
+    type: TypesButton
     title: string
     size: Sizes
     to?: string
 }
+
