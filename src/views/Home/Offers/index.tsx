@@ -4,6 +4,7 @@ import Section from 'components/Section'
 import useQuery from 'hooks/useQuery'
 import Line from 'components/line'
 import Title from 'components/Title'
+import { v4 as uuid } from 'uuid';
 import React from 'react'
 
 const posts : Post[] = [
@@ -13,7 +14,7 @@ const posts : Post[] = [
             name: "Platzi"
         },
         description: "Desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
-        title: "Frontend Developer Junior qwdqw qdwdq qwdwqd qwdqdqwdqd",
+        title: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         tags: [],
         ubication: {
             id: "0",
@@ -25,8 +26,8 @@ const posts : Post[] = [
             id: "0",
             name: "Platzi"
         },
-        description: "Desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
-        title: "Frontend Developer Junior",
+        description: "xDesconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+        title: "xxxFrontend Developer Junior",
         tags: [],
         ubication: {
             id: "0",
@@ -131,7 +132,7 @@ const OffersView = () => {
     const { offers } = useQuery()
 
     return (
-        <Section spacing='is-large'>
+        <Section background={offers.background_image} spacing='is-large'>
             
             <Title
                 title={offers.title!}
@@ -152,7 +153,7 @@ const OffersView = () => {
                     posts.map( post => (
                         <OfferCardHome
                             {...post}
-                            key={post.id}
+                            key={uuid()}
                         />
                     ))
                 }

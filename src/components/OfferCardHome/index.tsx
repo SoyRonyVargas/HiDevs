@@ -1,14 +1,22 @@
+import useInfoCard from './hooks/useInfoCard'
 import IconCard from './components/IconCard'
 import { OfferCardStyled } from './styled'
 import type { Post } from '../../../types'
 import Button from 'components/Button'
 import Title from 'components/Title'
+import Info from './components/Info'
 import Paragraph from 'components/P'
 import React from 'react'
 
 const OfferCardHome = (props: Post) => {
 
-  const { title, description } = props
+  const { description } = props
+
+  const {
+    title
+  } = useInfoCard(props)
+
+  console.log(props.title);
 
   return (
     <div className="column is-varisable">
@@ -23,7 +31,11 @@ const OfferCardHome = (props: Post) => {
           type="h2"
         />
 
-        <Paragraph size='is-small'>
+          <Info
+            {...props}
+          /> 
+
+        <Paragraph className='mt-2' size='is-small'>
           {description}
         </Paragraph>
 

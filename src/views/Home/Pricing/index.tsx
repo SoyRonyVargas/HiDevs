@@ -4,6 +4,7 @@ import useQuery from 'hooks/useQuery'
 import Paragraph from 'components/P'
 import Title from 'components/Title'
 import Line from 'components/line'
+import { v4 as uuid } from 'uuid';
 import React from 'react'
 
 const PricingView = () => {
@@ -37,7 +38,7 @@ const PricingView = () => {
                     pricing.articles.map( article => (
                         <CardPrincing
                             {...article}
-                            key={article.id}
+                            key={uuid()}
                         />
                     ))
                 }

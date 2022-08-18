@@ -10,3 +10,11 @@ export const ContainerMainImage = styled.div`
         height: 350px;
     }
 `
+
+export const InputNewsletterStyled = styled.div`
+    width: 100%;
+    @media screen and (max-width: 1024px){
+        max-width: 100%;
+        margin: 0 auto;
+    }
+`

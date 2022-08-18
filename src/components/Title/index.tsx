@@ -1,5 +1,5 @@
 import useClassName from 'hooks/useClassName'
-import { TitleH2Styled } from './styled'
+import { TitleStyled } from './styled'
 import type { Props } from './types'
 import React from 'react'
 
@@ -10,12 +10,12 @@ const Title = ( props : Props ) => {
     const memoizedClassName = useClassName( props , "" )
 
     return (
-        <TitleH2Styled 
+        <TitleStyled 
             {...props}
             className={memoizedClassName} 
         >
             { title }
-        </TitleH2Styled>
+        </TitleStyled>
     )
 }
 

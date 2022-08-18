@@ -18,8 +18,20 @@ const sizes : PropsSizes = {
     "is-price": ""
 }
 
+const sizesResponsive : PropsSizes = {
+    'is-hero': '',
+    'is-large': '1',
+    'is-medium' : '1.50rem' ,
+    'is-normal' : '1.50rem' ,
+    "is-small": '1.25rem',
+    "is-price": ""
+}
+
 export const ParagraphStyled = styled.p<Props>`
     color: ${ props => colors[props.color!] };
     font-size: ${ props => sizes[props.size!] || sizes['is-normal'] };
     line-height: 2;
+    @media screen and (max-width: 480px){
+        font-size: ${ props => sizesResponsive[props.size!] || sizesResponsive['is-normal'] };;
+    }
 `

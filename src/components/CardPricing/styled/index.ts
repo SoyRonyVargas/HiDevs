@@ -4,14 +4,11 @@ export const CardPriceStyled = styled.article<{ is_marked: boolean }>`
     background: #FFFFFF;
     border: 4px solid #ddd;
     border-radius: 15px;
-    /* max-height: 500px; */
-    /* min-height: 500px; */
     max-width: 380px;
     min-width: 380px;
     margin: 0 auto;
-    padding: 40px 25px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding: 20px 25px;
+    padding-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

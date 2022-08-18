@@ -18,7 +18,7 @@ const TechnologiesView = () => {
             size='is-large'
         />
         
-        <section className='columns is-multiline is-centered mt-5'>
+        <section className='columns is-multiline is-centered mt-5 grid__tecnologies--mobile'>
             {
                 tecnologies.articles.map( article => (
                     <ImageItem

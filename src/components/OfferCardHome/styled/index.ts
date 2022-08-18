@@ -10,6 +10,10 @@ export const OfferCardStyled = styled.article`
     min-width: 380px;
     margin: 0 auto;
     padding: 30px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @media screen and (max-width: 480px){
         max-width: 100%;
         min-width: 100%;
@@ -25,4 +29,10 @@ export const IconOfferStyled = styled.div`
     {
         border-radius: inherit;
     }
+`
+
+export const ContainerInfoStyled = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `

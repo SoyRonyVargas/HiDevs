@@ -168,6 +168,11 @@ export const data: SectionData = {
             checked: true
           },
           {
+            title: "All benefits" ,
+            description: "",
+            checked: false
+          },
+          {
             title: "Create unlimited posts" ,
             description: "",
             checked: false
@@ -193,6 +198,11 @@ export const data: SectionData = {
         price: 199,
         is_marked: true,
         list: [
+          {
+            title: "All benefits" ,
+            description: "",
+            checked: true
+          },
           {
             title: "Applies to unlimited monthly offers" ,
             description: "",
@@ -230,7 +240,7 @@ export const data: SectionData = {
   },
   offers: {
     articles: [],
-    background_image: null,
+    background_image: '/generic/background.png',
     description: null,
     main_image: null,
     title: 'See the most relevant job offers'

@@ -1,4 +1,4 @@
-import { ContainerMainImage } from './styled'
+import { ContainerMainImage, InputNewsletterStyled } from './styled'
 import Section from 'components/Section'
 import useQuery from 'hooks/useQuery'
 import Paragraph from 'components/P'
@@ -33,7 +33,7 @@ const NewsletterView = () => {
             {newsletter.description!}
           </Paragraph>
 
-          <div className="field w-100">
+          <InputNewsletterStyled className="field">
             <div className="control has-icons-left is-fullwidth">
               <input className="input is-large is-fullwidth" type="email" placeholder="Email" />
               <span className="icon is-medium is-left">
@@ -41,7 +41,7 @@ const NewsletterView = () => {
               </span>
 
             </div>
-          </div>
+          </InputNewsletterStyled>
 
         </div>
         <div className="column">
