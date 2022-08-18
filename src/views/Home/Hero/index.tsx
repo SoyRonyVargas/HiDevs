@@ -15,11 +15,12 @@ const HomeHeroView = () => {
   return (
     <HeroContainer>
         <BackgroundImage
-            width={"100%"}
-            height={"100%"}
+            // width={"100%"}
+            // height={"100%"}
             layout="fill"
-            quality={100}
+            quality={50}
             src={BackgroundURL}
+            priority
         />
         <Container extraClassName='container__relative'>
         <div className="columns is-fullheight">
