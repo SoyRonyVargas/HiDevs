@@ -15,5 +15,7 @@ export const LineStyled = styled('div')<Props>( props => ({
     borderRadius: '100px',
     width: widths[props.width!] || widths['full'],
     height: heights[props.height!] || widths['full'],
-    background: "var(--color-primary)"
+    background: "var(--color-primary)",
+    marginLeft: "auto",
+    marginRight: "auto",
 }))

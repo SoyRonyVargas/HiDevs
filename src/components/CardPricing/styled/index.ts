@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
-export const CardPriceStyled = styled.article`
+export const CardPriceStyled = styled.article<{ is_marked: boolean }>`
     background: #FFFFFF;
-    border: 2px solid #ddd;
+    border: 4px solid #ddd;
     border-radius: 15px;
     /* max-height: 500px; */
     /* min-height: 500px; */
@@ -18,6 +18,11 @@ export const CardPriceStyled = styled.article`
     box-shadow: 8px 10px 30px -4px rgba(0,0,0,0.10);
     -webkit-box-shadow: 8px 10px 30px -4px rgba(0,0,0,0.10);
     -moz-box-shadow: 8px 10px 30px -4px rgba(0,0,0,0.10);
+    border-color: ${ props => props.is_marked ? 'var(--color-primary)' : '#ddd' };
+    @media screen and (max-width: 480px){
+        max-width: 100%;
+        min-width: 100%;
+    }
 `
 
 export const WrapperItemPricing = styled.div`

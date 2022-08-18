@@ -5,18 +5,9 @@ import React from 'react'
 
 const Title = ( props : Props ) => {
     
-    const { title, type } = props
+    const { title } = props
     
     const memoizedClassName = useClassName( props , "" )
-
-    // const titles = {
-    //     h1: TitleH2Styled,
-    //     h2: TitleH2Styled,
-    //     h3: TitleH2Styled,
-    //     h4: TitleH2Styled
-    // }
-
-    // const TitleSelected = titles[type]
 
     return (
         <TitleH2Styled 

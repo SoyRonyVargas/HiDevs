@@ -1,0 +1,42 @@
+import IconCard from './components/IconCard'
+import { OfferCardStyled } from './styled'
+import type { Post } from '../../../types'
+import Button from 'components/Button'
+import Title from 'components/Title'
+import Paragraph from 'components/P'
+import React from 'react'
+
+const OfferCardHome = (props: Post) => {
+
+  const { title, description } = props
+
+  return (
+    <div className="column is-varisable">
+      <OfferCardStyled>
+        
+        <IconCard />
+        
+        <Title
+          className='my-4'
+          size='is-normal'
+          title={title}
+          type="h2"
+        />
+
+        <Paragraph size='is-small'>
+          {description}
+        </Paragraph>
+
+        <Button
+          className='is-fullwidth mt-4'
+          size='is-normal'
+          title='Apply Now'
+          type='primary'
+        />
+
+      </OfferCardStyled>
+    </div>
+  )
+}
+
+export default OfferCardHome

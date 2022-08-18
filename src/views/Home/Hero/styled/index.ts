@@ -5,7 +5,9 @@ export const HeroContainer = styled.div`
     position: relative;
     height: 100vh;
     /* background-color: red; */
-
+    @media screen and (max-width: 768px){
+        height: auto;
+    }
 `
 
 export const BackgroundImage = styled(Image)`

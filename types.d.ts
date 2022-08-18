@@ -11,6 +11,7 @@ export type Article = {
     id: string
     price?: number
     list?: ArticleExtra[]
+    is_marked?: boolean
 }
 
 export type ArticleBasic = Pick<Article, "title" | "description">
@@ -64,4 +65,20 @@ export type PropsTypesButton = {
 
 export type PropsWeight = {
     [s in Weight]: string
+}
+
+type Base = {
+    name: string
+    id: string
+}
+
+// types del modelo
+
+export type Post = {
+    title: string
+    description: string
+    tags: string[]
+    id?: string
+    ubication: Base
+    business: Base
 }

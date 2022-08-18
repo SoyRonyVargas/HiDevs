@@ -6,8 +6,8 @@ const fontSizes : PropsSizes = {
     'is-hero': '70px',
     'is-large': '50px',
     'is-medium':  '30px',
-    'is-normal': '1.8rem',
-    'is-small': '10px',
+    'is-normal': '1.4rem',
+    'is-small': '1.2rem',
     'is-price': '2.2rem'
 }
 
@@ -16,11 +16,6 @@ const colors : PropsColors = {
     gray: "#909090",
     black: "#000000",
     main: "#6633EB"
-}
-
-const weights: PropsWeight = {
-    normal: "normal",
-    bold: ""
 }
 
 const fonts: PropsWeight = {
@@ -32,9 +27,10 @@ export const TitleStyled = styled("h2")<Props>( props => ({
     fontFamily: fonts[props.weight!] || fonts['normal'],
     fontSize: fontSizes[props.size!],
     color: colors[props.color!] || colors['black'],
-    fontWeight: props.size === 'is-hero' ? "normal" : 700
+    fontWeight: props.size === 'is-hero' ? "normal" : 700,
+    lineHeight: 1,
 })) 
 
 export const TitleH2Styled = styled(TitleStyled)<Props>( props => ({
-
+    
 })) 

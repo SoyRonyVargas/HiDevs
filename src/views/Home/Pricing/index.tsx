@@ -1,8 +1,9 @@
 import CardPrincing from 'components/CardPricing'
-import Paragraph from 'components/P'
 import Section from 'components/Section'
-import Title from 'components/Title'
 import useQuery from 'hooks/useQuery'
+import Paragraph from 'components/P'
+import Title from 'components/Title'
+import Line from 'components/line'
 import React from 'react'
 
 const PricingView = () => {
@@ -10,7 +11,7 @@ const PricingView = () => {
     const { pricing } = useQuery()
 
     return (
-        <Section spacing='is-large'>
+        <Section spacing='is-large' className='pt-3'>
             <Title
                 title={"Our Pricing"}
                 aling='has-text-centered'
@@ -19,13 +20,18 @@ const PricingView = () => {
             />
 
             <Paragraph
-                className='my-5'
+                className='mb-6 mt-6'
                 aling='has-text-centered'
             >
-                test
+                { pricing.description }
             </Paragraph>
 
-            <section className="columns is-mbile is-centered">
+            <Line 
+                height='full' 
+                width='small'
+            />
+
+            <section className="columns is-mbile is-centered mt-6">
 
                 {
                     pricing.articles.map( article => (

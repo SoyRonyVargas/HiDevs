@@ -7,6 +7,8 @@ import React from 'react'
 const ImageContainerStyled = styled.div`
     filter: grayscale(1);
     opacity: .8;
+    display: grid;
+    place-items: center;
 `
 
 const ImageStyled = styled(Image)`
@@ -20,12 +22,12 @@ const ImageItem = (props: Article) => {
     return (
         <motion.div  
             className='column is-2'
-            initial={{ 
-                opacity: 0, 
-                scale: .5 ,
-                y: "50px"
-            }} 
-            whileInView={{ 
+            // initial={{ 
+            //     opacity: 0, 
+            //     scale: .5 ,
+            //     y: "50px"
+            // }} 
+            animate={{ 
                 opacity: 1, 
                 scale: 1 ,
                 y: 0

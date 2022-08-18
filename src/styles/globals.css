@@ -20,6 +20,7 @@
     src: url('./fonts/PublicaSansRound-Bd.otf');
     font-display: swap;
 }
+
 html
 {
     font-size: 16px;
@@ -32,11 +33,25 @@ h4
 {
     font-family: 'PublicaSans';
 }
-/* .button, */
-p
+p,
+.input
 {
     font-family: 'Lato';
 }
+.my-6
+{
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+.mb-6
+{
+    margin-bottom: 2rem !important;
+}
+.mt-6
+{
+    margin-top: 2rem !important;
+}
+
 .w-100
 {
     width: 100%;
@@ -45,7 +60,7 @@ p
 .button
 {
     font-family: 'PublicaSansMedium';
-    border-radius: 10px;
+    border-radius: 7px;
 }
 .columns
 {
@@ -70,4 +85,12 @@ p
     height: 100%;
     /* background-color: red; */
     /* border: 1px solid; */
+}
+
+@media screen and (max-width: 480px) {
+    .container
+    {
+        width: 100%;
+        max-width: 85%;
+    }
 }

@@ -9,11 +9,11 @@ import React from 'react'
 
 const CardPrincing = (props: Article) => {
 
-    const { title, description, price, list } = props
+    const { title, description, price, list , is_marked } = props
 
     return (
         <div className='column is-4'>
-            <CardPriceStyled>
+            <CardPriceStyled is_marked={is_marked || false}>
 
                 <ContainerWrapper>
                     <ContainerTop>
@@ -26,7 +26,7 @@ const CardPrincing = (props: Article) => {
                             type="h2"
                         />
 
-                        <Paragraph size='is-small'>
+                        <Paragraph className='my-2' size='is-small'>
                             {description}
                         </Paragraph>
 

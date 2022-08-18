@@ -191,6 +191,7 @@ export const data: SectionData = {
         id: "pricing-1",
         image: null,
         price: 199,
+        is_marked: true,
         list: [
           {
             title: "Applies to unlimited monthly offers" ,
@@ -217,7 +218,21 @@ export const data: SectionData = {
     ],
     background_image: null,
     title: "Our Pricing",
-    description: "Check out best prices",
+    description: "The best for you and your future work team",
     main_image: null
+  },
+  newsletter: {
+    articles: [],
+    background_image: '/newsletter/background.png',
+    title: "Subscribe to our newsletter",
+    description: "We are a platform to get any jobs for developers and project managers. Meet and greet some people and more text.",
+    main_image: '/newsletter/main.png'
+  },
+  offers: {
+    articles: [],
+    background_image: null,
+    description: null,
+    main_image: null,
+    title: 'See the most relevant job offers'
   }
 };

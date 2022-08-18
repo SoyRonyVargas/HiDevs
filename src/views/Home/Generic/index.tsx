@@ -13,7 +13,7 @@ const GenericSectionView = () => {
     const { generic } = useQuery()
 
     return (
-    <Section spacing='is-large' background={generic.background_image}>
+    <Section spacing='is-large' className='pt-0' background={generic.background_image}>
         
         <div className="columns" style={{
                 paddingTop: '5rem'
