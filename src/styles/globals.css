@@ -8,14 +8,17 @@
 @font-face {
     font-family: 'PublicaSans';
     src: url('./fonts/PublicaSansRound-Rg.otf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'PublicaSansMedium';
     src: url('./fonts/PublicaSansRound-Md.otf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'PublicaSansBold';
     src: url('./fonts/PublicaSansRound-Bd.otf');
+    font-display: swap;
 }
 html
 {
