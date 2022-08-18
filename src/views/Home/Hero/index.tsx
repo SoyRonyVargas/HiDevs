@@ -18,6 +18,7 @@ const HomeHeroView = () => {
             width={"100%"}
             height={"100%"}
             layout="fill"
+            quality={100}
             src={BackgroundURL}
         />
         <Container extraClassName='container__relative'>

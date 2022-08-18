@@ -1,3 +1,10 @@
+:root
+{
+    --color-primary: #6633EB;
+    --color-green: #46D39A;
+    --color-red: #FF4848;
+}
+
 @font-face {
     font-family: 'PublicaSans';
     src: url('./fonts/PublicaSansRound-Rg.otf');
@@ -6,7 +13,10 @@
     font-family: 'PublicaSansMedium';
     src: url('./fonts/PublicaSansRound-Md.otf');
 }
-
+@font-face {
+    font-family: 'PublicaSansBold';
+    src: url('./fonts/PublicaSansRound-Bd.otf');
+}
 html
 {
     font-size: 16px;

@@ -170,5 +170,73 @@ export const data: SectionData = {
     main_image: MainImageGeneric,
     description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English",
     title: "Generic Title"
+  },
+  pricing: {
+    articles: [
+      {
+        title: "Free",
+        description: "Desconocido usó una galería de textos y los mezcló de tal que logró hacer un libro de textos especimen. ",
+        bg_color: null,
+        id: "pricing-1",
+        image: null,
+        price: 0,
+        list: [
+          {
+            title: "Applies to 3 monthly offers" ,
+            description: "",
+            checked: true
+          },
+          {
+            title: "Create unlimited posts" ,
+            description: "",
+            checked: false
+          },
+          {
+            title: "No adds" ,
+            description: "",
+            checked: false
+          },
+          {
+            title:  "Dedicated support" ,
+            description: "",
+            checked: false
+          },
+        ]
+      },
+      {
+        title: "Premium",
+        description: "Desconocido usó una galería de textos y los mezcló de tal que logró hacer un libro de textos especimen. ",
+        bg_color: null,
+        id: "pricing-1",
+        image: null,
+        price: 199,
+        list: [
+          {
+            title: "Applies to unlimited monthly offers" ,
+            description: "",
+            checked: true
+          },
+          {
+            title: "Create unlimited posts" ,
+            description: "",
+            checked: true
+          },
+          {
+            title: "No adds" ,
+            description: "",
+            checked: true
+          },
+          {
+            title: "Dedicated support" ,
+            description: "",
+            checked: true
+          },
+        ]
+      }
+    ],
+    background_image: null,
+    title: "Our Pricing",
+    description: "Check out best prices",
+    main_image: null
   }
 };

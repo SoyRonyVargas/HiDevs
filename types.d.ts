@@ -9,6 +9,14 @@ export type Article = {
     bg_color: StringNullty
     title: StringNullty
     id: string
+    price?: number
+    list?: ArticleExtra[]
+}
+
+export type ArticleBasic = Pick<Article, "title" | "description">
+
+export type ArticleExtra = ArticleBasic & {
+    checked: boolean
 }
 
 export type Section = {
@@ -23,13 +31,15 @@ export type SectionData = {
     [ foo: string ] : Section
 } 
 
-export type Colors = 'white' | 'black' | "gray"
+export type Colors = 'white' | 'black' | "gray" | "main"
 
 export type Alignment = 'has-text-centered' | "has-text-left" | "has-text-right"
 
 export type TypesButton = 'primary' | 'secondary' | 'transparent'
 
-export type Sizes = 'is-small' | 'is-normal' | 'is-medium' | 'is-large' | 'is-hero'
+export type Sizes = 'is-small' | 'is-normal' | 'is-medium' | 'is-large' | 'is-hero' | 'is-price'
+
+export type Weight = 'normal' | 'bold'
 
 export type GenericTextProps = {
     className?: string
@@ -37,6 +47,7 @@ export type GenericTextProps = {
     color?: Colors
     children ?: React.ReactNode
     size? : Sizes
+    weight? : Weight
 }
 
 export type PropsSizes = {
@@ -49,4 +60,8 @@ export type PropsColors = {
 
 export type PropsTypesButton = {
     [s in TypesButton]: string
+}
+
+export type PropsWeight = {
+    [s in Weight]: string
 }

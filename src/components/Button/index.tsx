@@ -10,7 +10,10 @@ const Button = (props: Props) => {
     const classNameMemoized = useClassName( props , "button " )
 
     const Component = () => (
-        <ButtonStyled className={classNameMemoized} {...props}>
+        <ButtonStyled 
+            {...props}
+            className={classNameMemoized} 
+        >
             {
                 title
             }
