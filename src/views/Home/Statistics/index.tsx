@@ -51,11 +51,11 @@ const StatisticsView = () => {
                 </div>
                 <div className="column">
                     <Image 
-                        src={statistics.main_image}
+                        src={statistics.main_image!}
                         alt={statistics.title!}
                         title={statistics.title!}
                         layout={'responsive'}
-                        placeholder="blur"
+                        // placeholder="blur"
                         quality={100}
                         height={700}
                         width={700}

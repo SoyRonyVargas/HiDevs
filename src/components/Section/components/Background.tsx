@@ -21,7 +21,7 @@ const Background = ({ background }: { background: StaticImageNullty }) => {
             <BackgroundStyled
                 layout='fill'
                 objectFit='cover'
-                src={background}
+                src={background!}
                 quality={100}
             />
         </BackgroundContainer>

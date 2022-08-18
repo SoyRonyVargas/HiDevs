@@ -1,3 +1,4 @@
+import { ContainerMainImage } from './styled'
 import Section from 'components/Section'
 import Button from 'components/Button'
 import useQuery from 'hooks/useQuery'
@@ -20,15 +21,19 @@ const GenericSectionView = () => {
             >
 
                 <div className="column">
-                    <Image 
-                        src={generic.main_image}
-                        alt={generic.title!}
-                        title={generic.title!}
-                        // layout={'fill'}
-                        placeholder="blur"
-                        // width={700}
-                        sizes={''}
-                    />
+                    <ContainerMainImage>
+                        <Image 
+                            src={generic.main_image!}
+                            alt={generic.title!}
+                            title={generic.title!}
+                            layout={'fill'}
+                            objectFit="contain"
+                            quality={100}
+                            // placeholder="blur"
+                            // width={300}
+                            // height={700}
+                        />
+                    </ContainerMainImage>
                 </div>
 
                 <div className={`column ${classes.verticalCenterAlign}`}>

@@ -12,7 +12,7 @@ const CardHome = (props: Article) => {
     <CardHomeStyled {...props}>
       <CardContainImage>
         <CardImage
-          src={image}
+          src={image!}
           objectFit='cover'
           layout='fill'
           quality={100}

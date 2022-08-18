@@ -38,7 +38,7 @@ const ImageItem = (props: Article) => {
         >
             <ImageContainerStyled>
                 <ImageStyled
-                    src={image}
+                    src={image!}
                     alt={title!}
                     title={title!}
                     width={180}

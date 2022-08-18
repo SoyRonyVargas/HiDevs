@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next'
 
-type StaticImageNullty = StaticImageData | null
+type StaticImageNullty = string | null
 type StringNullty = string | null
 
 export type Article = {

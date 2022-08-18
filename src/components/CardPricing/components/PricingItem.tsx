@@ -1,6 +1,6 @@
 import { IconCheckedStyled, WrapperItemPricing , IconNotCheckedStyled } from '../styled'
-import IconWrongCheckedIMG from '../../../assets/icons/wrong.png'
-import IconCheckedIMG from '../../../assets/icons/done.png'
+// import IconWrongCheckedIMG from '../../../assets/icons/wrong.png'
+// import IconCheckedIMG from '../../../assets/icons/done.png'
 import { ArticleExtra } from '../../../../types'
 import Paragraph from 'components/P'
 import Image from 'next/image'
@@ -11,7 +11,7 @@ const IconChecked = () => (
         <Image
             alt='Icon checked - HiDevs'
             title='Icon checked - HiDevs'
-            src={IconCheckedIMG}
+            src={'/icons/done.png'}
             width={20}
             height={20}
         />
@@ -23,7 +23,7 @@ const IconNotChecked = () => (
         <Image
             alt='Icon checked - HiDevs'
             title='Icon checked - HiDevs'
-            src={IconWrongCheckedIMG}
+            src={'/icons/wrong.png'}
             width={20}
             height={20}
         />
