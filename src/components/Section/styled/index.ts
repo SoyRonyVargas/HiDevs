@@ -7,7 +7,8 @@ export const spacing : PropsSizes = {
     "is-normal": '1rem',
     "is-medium": '1.5rem',
     "is-hero": "",
-    "is-large": "5rem"
+    "is-large": "5rem",
+    "is-price": ""
 }
 
 export const SectionStyled = styled.section<Props>`

@@ -28,7 +28,7 @@ const useClassName = ( props : GenericTextProps , initialValue: string = "" ) =>
         
         return str
 
-    } , [ size , className , aling ])
+    } , [ size , className , aling , initialValue ])
   
     return classNameMemoized
 
