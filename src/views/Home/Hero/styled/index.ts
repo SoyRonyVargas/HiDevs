@@ -10,6 +10,23 @@ export const HeroContainer = styled.div`
     }
 `
 
+export const ContainerMainImageStyled = styled.div`
+    place-items: center;
+    position: relative;
+    display: grid;
+    height: 600px;
+    width: 600px;
+    @media screen and (max-width: 1024px)
+    {
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 480px)
+    {
+        width: 350px;
+        height: 350px;
+    }
+`
+
 export const BackgroundImage = styled(Image)`
     position: absolute;
     height: inherit;

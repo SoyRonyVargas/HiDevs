@@ -17,8 +17,6 @@ const useViewport = () => {
             height: innerHeight
         })
         
-        console.log(dimensions);
-
     }
 
     useEffect( () => {

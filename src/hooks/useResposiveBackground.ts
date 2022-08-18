@@ -9,9 +9,6 @@ const useResposiveImage = ( baseURL = '/home/' ) => {
 
     const { width } = dimensions
 
-    console.log(dimensions);
-    
-
     useEffect( () => {
 
         checkSizeImage()
@@ -23,8 +20,6 @@ const useResposiveImage = ( baseURL = '/home/' ) => {
         checkSizeImage()
 
     }, [width])
-
-    // console.log(width);
 
     const checkSizeImage = () => {
 

@@ -6,9 +6,15 @@ import React from 'react'
 
 const ImageContainerStyled = styled.div`
     filter: grayscale(1);
-    opacity: .8;
-    display: grid;
     place-items: center;
+    position: relative;
+    display: grid;
+    width: 180px;
+    height: 80px;
+    opacity: .8;
+    @media screen and (max-width: 480px){
+        width: 150px;
+    }
 `
 
 const ImageStyled = styled(Image)`
@@ -46,6 +52,7 @@ const ImageItem = (props: Article) => {
                     width={180}
                     height={80}
                     objectFit="contain"
+                    layout='fill'
                 />
             </ImageContainerStyled>
         </motion.div>

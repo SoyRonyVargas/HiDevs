@@ -1,4 +1,4 @@
-import { HeroContainer, BackgroundImage , MainImageStyled } from './styled'
+import { HeroContainer, BackgroundImage , MainImageStyled , ContainerMainImageStyled } from './styled'
 import Container from '../../../components/Container'
 import useResposiveImage from 'hooks/useResposiveBackground'
 import Button from '../../../components/Button'
@@ -13,9 +13,6 @@ const classes = {
 const HomeHeroView = () => {
 
   const background = useResposiveImage('/hero')
-
-  console.log(background);
-  
 
   return (
     <HeroContainer>
@@ -46,12 +43,16 @@ const HomeHeroView = () => {
               size='is-large'
             />
           </div>
-          <div className={`${ classes.column } is-flex-direction-column is-align-items-flex-start	`}>
-            <MainImageStyled
-              height={600}
-              width={600}
-              src={'/hero/main.png'}
-            />
+          <div className={`${ classes.column } is-flex-direction-column is-align-items-flex-start	relative`}>
+            <ContainerMainImageStyled>
+              <MainImageStyled
+                quality={90}
+                height={600}
+                width={600}
+                layout="fill"
+                src={'/hero/main.png'}
+              />
+            </ContainerMainImageStyled>
           </div>
         </div>
         </Container>
