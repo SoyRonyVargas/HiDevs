@@ -1,6 +1,4 @@
 import { IconCheckedStyled, WrapperItemPricing , IconNotCheckedStyled } from '../styled'
-// import IconWrongCheckedIMG from '../../../assets/icons/wrong.png'
-// import IconCheckedIMG from '../../../assets/icons/done.png'
 import { ArticleExtra } from '../../../../types'
 import Paragraph from 'components/P'
 import Image from 'next/image'
@@ -11,7 +9,7 @@ const IconChecked = () => (
         <Image
             alt='Icon checked - HiDevs'
             title='Icon checked - HiDevs'
-            src={'/icons/done.png'}
+            src={'/done.png'}
             width={20}
             height={20}
         />
