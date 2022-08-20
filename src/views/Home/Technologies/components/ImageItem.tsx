@@ -12,6 +12,7 @@ const ImageContainerStyled = styled.div`
     width: 180px;
     height: 80px;
     opacity: .8;
+    margin: 0 auto;
     @media screen and (max-width: 480px){
         width: 100px;
     }
