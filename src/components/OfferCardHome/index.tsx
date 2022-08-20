@@ -16,8 +16,6 @@ const OfferCardHome = (props: Post) => {
     title
   } = useInfoCard(props)
 
-  console.log(props.title);
-
   return (
     <div className="column is-varisable">
       <OfferCardStyled>

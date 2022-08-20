@@ -16,8 +16,6 @@ const HomeHeroView = () => {
 
   return (
     <HeroContainer>
-
-        
         <BackgroundImage
             layout="fill"
             quality={100}

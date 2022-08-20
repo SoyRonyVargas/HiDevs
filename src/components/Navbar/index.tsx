@@ -19,8 +19,6 @@ const NavBar = ( props : Props ) => {
     visible: showNav
   }
 
-  console.log(obj);
-
   return (
     <NavbarStyled className={ y > MAX_HEIGHT_VIEWPORT ? "navbar--shadow" : ""} {...obj}>
       <div className='container'>

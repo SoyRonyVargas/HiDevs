@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import React from 'react'
+import Animation from 'components/Animation'
 
 const ImageContainerStyled = styled.div`
     filter: grayscale(1);
@@ -27,23 +28,23 @@ const ImageItem = (props: Article) => {
     const { image, title } = props
 
     return (
-        <motion.div  
+        <Animation 
             className='column is-2'
             // initial={{ 
             //     opacity: 0, 
             //     scale: .5 ,
             //     y: "50px"
             // }} 
-            animate={{ 
-                opacity: 1, 
-                scale: 1 ,
-                y: 0
-            }}
-            transition={{
-                duration: 1,
-                delay: .4,
-                ease: [0, 0.71, 0.2, 1.01]
-            }}
+            // animate={{ 
+            //     opacity: 1, 
+            //     scale: 1 ,
+            //     y: 0
+            // }}
+            // transition={{
+            //     duration: 1,
+            //     delay: .4,
+            //     ease: [0, 0.71, 0.2, 1.01]
+            // }}
         >
             <ImageContainerStyled>
                 <ImageStyled
@@ -56,7 +57,7 @@ const ImageItem = (props: Article) => {
                     layout='fill'
                 />
             </ImageContainerStyled>
-        </motion.div>
+        </Animation>
     )
 }
 
