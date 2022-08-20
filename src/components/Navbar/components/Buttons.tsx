@@ -16,10 +16,11 @@ const Buttons = () => {
             <div className="container__buttons--desktop">
                 
                 <Button
+                    className='border-0 mr-5'
                     title='Create Post'
                     type='transparent'
                     size='is-normal'
-                    className='border-0 mr-5'
+                    color='white'
                 />
 
                 <Link href='signup'>

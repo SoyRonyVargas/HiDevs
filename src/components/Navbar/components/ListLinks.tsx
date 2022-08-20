@@ -4,28 +4,37 @@ import ItemLink from './ItemLink'
 import React from 'react'
 import { v4 } from 'uuid'
 
-const ListLinks = () => {
+export type Props = {
+    showIcon?: boolean
+}
+
+const ListLinks = ( { showIcon = false } : Props ) => {
   
     const items : NavLink[] = [
         {
             title: "Home",
-            to: "/"
+            to: "/",
+            icon: 'fa-home'
         },
         {
             title: "Jobs",
-            to: "/"
+            to: "/",
+            icon: 'fa-briefcase'
         },
         {
             title: "About",
-            to: "/"
+            to: "/",
+            icon: 'fa-info'
         },
         {
             title: "Pricing",
-            to: "/"
+            to: "/",
+            icon: 'fa-briefcase'
         },
         {
             title: "Contact",
-            to: "/"
+            to: "/",
+            icon: 'fa-briefcase'
         },
     ]
 
@@ -34,6 +43,7 @@ const ListLinks = () => {
         {
             items.map( item => (
                 <ItemLink
+                    showIcon={showIcon}
                     {...item}
                     key={v4()}
                 />

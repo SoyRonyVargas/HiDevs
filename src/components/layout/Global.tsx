@@ -1,19 +1,26 @@
+import NavbarMobile from 'components/Navbar/components/NavbarMobile'
+import React, { FC, ReactNode } from 'react'
+import { LayoutGlobalStyled } from './styled'
 import Navbar from 'components/Navbar'
-import React , { FC , ReactNode } from 'react'
 
 type Props = {
-    children: ReactNode
+  children: ReactNode
 }
 
-const GlobalLayout : FC<Props> = ({ children }) => {
+const GlobalLayout: FC<Props> = ({ children }) => {
   return (
-    <>
-        <Navbar
-          typed='normal'
-          color='transparent'
-        />
-        { children } 
-    </>
+    <LayoutGlobalStyled>
+
+      <NavbarMobile />
+
+      <Navbar
+        typed='normal'
+        color='transparent'
+      />
+
+      {children}
+
+    </LayoutGlobalStyled>
   )
 }
 

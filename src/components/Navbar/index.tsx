@@ -4,7 +4,7 @@ import ListLinks from './components/ListLinks'
 import Buttons from './components/Buttons'
 import Logo from './components/Logo'
 import { Props } from './types'
-import React from 'react'
+import useUI from 'hooks/useUI'
 
 const MAX_HEIGHT_VIEWPORT = 0
 
@@ -12,12 +12,21 @@ const NavBar = ( props : Props ) => {
   
   const { y } = useScrollPosition()
 
+  const { showNav } = useUI()
+
+  const obj = {
+    ...props,
+    visible: showNav
+  }
+
+  console.log(obj);
+
   return (
-    <NavbarStyled className={ y > MAX_HEIGHT_VIEWPORT ? "navbar--shadow" : ""} {...props}>
+    <NavbarStyled className={ y > MAX_HEIGHT_VIEWPORT ? "navbar--shadow" : ""} {...obj}>
       <div className='container'>
         <ContainerSideStyled>
           <Logo/>
-          <ListLinks/>
+          <ListLinks  />
         </ContainerSideStyled>
         <ContainerSideButtonsStyled>
           <Buttons/>

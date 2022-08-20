@@ -5,5 +5,6 @@ export type Props = GenericTextProps & {
     title: string
     size: Sizes
     to?: string
+    close_nav?: boolean
 }
 
