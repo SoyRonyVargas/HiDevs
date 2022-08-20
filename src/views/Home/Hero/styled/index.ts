@@ -17,14 +17,18 @@ export const ContainerMainImageStyled = styled.div`
     height: 600px;
     width: 600px;
     @media screen and (max-width: 1024px)
+    {  
+        max-width: 300px;
+        height: 300px;
+    }
+    @media screen and (max-width: 1024px)
     {
         margin: 0 auto;
     }
-    @media screen and (max-width: 480px)
+    /* @media screen and (max-width: 480px)
     {
-        width: 350px;
-        height: 350px;
-    }
+      
+    } */
 `
 
 export const BackgroundImage = styled(Image)`

@@ -152,6 +152,8 @@ export const NavResponsiveStyled = styled("div")<{visible: boolean}>( props => (
         // background: 'var(--color-primary)' ,
         left: 0,
         top: 0,
+        bottom: 0,
+        right: 0,
         zIndex: 8,
         transition: '500ms',
         opacity: props.visible ? 1 : 0,
