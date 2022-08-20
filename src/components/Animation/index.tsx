@@ -1,5 +1,6 @@
 import { AnimationControls, motion, Target, TargetAndTransition, Transition, useInView, useAnimation, VariantLabels, Variants } from 'framer-motion'
 import React, { FC, useEffect, useRef } from 'react'
+const Fade = require('react-reveal/Fade')
 
 type Animation = AnimationControls | TargetAndTransition | VariantLabels | boolean;
 
@@ -30,16 +31,10 @@ const Animation: FC<Props> = ({ children , className }) => {
         },
         hidden: { 
             opacity: .5, 
-            scale: .5,
+            scale: 1,
             y: 50
         }
       };
-
-    const transition : Transition = {
-        duration: 1.5,
-        delay: 1.95,
-        ease: [0, 0.71, 0.2, 1.01]
-    }
 
     const controls = useAnimation()
 
@@ -50,14 +45,12 @@ const Animation: FC<Props> = ({ children , className }) => {
       }, [controls, isInView]);
 
     return (
-        <motion.div 
+        <motion.div
             className={className}
             ref={container} 
-            // initial={initial}
             initial={'hidden'}
             animate={controls}
             variants={squareVariants}
-            // transition={transition}
         >
             {children}
         </motion.div>
