@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Button = (props: Props) => {
     
-    const { title , to , color = 'white' , close_nav = false } = props
+    const { title , to , color = 'white' , close_nav = false , type_button } = props
     
     const classNameMemoized = useClassName( props , "button " )
 
@@ -18,8 +18,10 @@ const Button = (props: Props) => {
     }
 
     const Component = () => (
-        <ButtonStyled 
+        <ButtonStyled
             {...updateProps}
+            // type_button={type!}
+            type="submit"
             className={classNameMemoized} 
         >
             {

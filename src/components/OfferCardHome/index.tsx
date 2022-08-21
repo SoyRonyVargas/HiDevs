@@ -39,9 +39,9 @@ const OfferCardHome = (props: Post) => {
 
         <Button
           className='is-fullwidth mt-4'
-          size='is-normal'
+          type_button='primary'
           title='Apply Now'
-          type='primary'
+          size='is-normal'
         />
 
       </OfferCardStyled>

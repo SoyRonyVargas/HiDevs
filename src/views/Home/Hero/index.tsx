@@ -36,8 +36,8 @@ const HomeHeroView = () => {
               We are a platform to get any jobs for developers and project managers. Meet and greet some people and more text.
             </Paragraph>
             <Button
+              type_button='transparent'
               title='Get Started'
-              type='transparent'
               size='is-large'
             />
           </div>

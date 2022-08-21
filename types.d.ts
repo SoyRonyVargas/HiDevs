@@ -1,5 +1,9 @@
 import { StaticImageData } from 'next'
 
+export type ThunkFunction = (
+    ( dispatch : AppDispatch , getState: () => RootState ) => Promise<void>
+)
+
 type StaticImageNullty = string | null
 type StringNullty = string | null
 
@@ -82,3 +86,45 @@ export type Post = {
     ubication: Base
     business: Base
 }
+
+// 
+
+export type UserAuthResponse = {
+    user:         User;
+    access_token: string;
+}
+
+export type UserBase = {
+    id:           number;
+    user:         User;
+    active:       boolean;
+    repository:   string;
+    hackerrank:   string;
+    leetcode:     string;
+    cv:           null;
+    cover_letter: string;
+}
+
+export type User = {
+    last_login?:        null | string | Date;
+    id?:                number;
+    password:          string;
+    email:             string;
+    is_superuser:      boolean;
+    is_staff:          boolean;
+    is_active:         boolean;
+    username:          string;
+    first_name:        string;
+    last_name:         string;
+    date_jointed?:      Date;
+    website:           string;
+    phone_number:      string;
+    is_dev:            boolean;
+    is_hiring_manager: boolean;
+    groups:            any[];
+    user_permissions:  any[];
+}
+
+export type UserStore = Pick<User, "id" | "email" | "first_name">
+
+type FieldsStep0 = Pick<User , "email" | "first_name" | "password">

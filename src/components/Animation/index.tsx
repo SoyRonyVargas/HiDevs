@@ -1,10 +1,7 @@
-import { AnimationControls, motion, Target, TargetAndTransition, Transition, useInView, useAnimation, VariantLabels, Variants } from 'framer-motion'
+import { AnimationControls, motion, TargetAndTransition, useInView, useAnimation, VariantLabels, Variants } from 'framer-motion'
 import React, { FC, useEffect, useRef } from 'react'
-const Fade = require('react-reveal/Fade')
 
 type Animation = AnimationControls | TargetAndTransition | VariantLabels | boolean;
-
-type Initial = boolean | Target | VariantLabels;
 
 type Props = {
     children?: React.ReactNode

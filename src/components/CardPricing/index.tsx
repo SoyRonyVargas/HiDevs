@@ -58,8 +58,8 @@ const CardPrincing = (props: Article) => {
 
                         <Button
                             className='is-fullwidth'
+                            type_button='primary'
                             title='Get Started'
-                            type='primary'
                             size='is-normal'
                         />
                     </ContainerBottom>

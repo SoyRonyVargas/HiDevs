@@ -16,9 +16,9 @@ const Buttons = () => {
             <div className="container__buttons--desktop">
                 
                 <Button
+                    type_button='transparent'
                     className='border-0 mr-5'
                     title='Create Post'
-                    type='transparent'
                     size='is-normal'
                     color='white'
                 />

@@ -54,11 +54,11 @@ const GenericSectionView = () => {
                     </Paragraph>
 
                     <Button
-                        to='/login'
+                        type_button='primary'
                         title='Get Started'
                         size='is-large'
                         color='white'
-                        type='primary'
+                        to='/login'
                     />
 
                 </div>

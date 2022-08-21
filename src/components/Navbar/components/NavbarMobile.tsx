@@ -7,8 +7,8 @@ import Button from 'components/Button'
 const AuthButtons = () => (
     <NavButtonsResponsive>
       <Button
+        type_button='secondary'
         className='w-100'
-        type='secondary'
         size='is-medium'
         close_nav={true}
         title="Login"
@@ -16,8 +16,8 @@ const AuthButtons = () => (
         to='/login'
       />
       <Button
+        type_button='transparent'
         className='w-100 mt-5'
-        type='transparent'
         title="Sign Up"
         size='is-medium'
         to='/signup'

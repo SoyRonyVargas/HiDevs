@@ -1,10 +1,9 @@
 import React from 'react'
+import LoginView from 'views/Login'
 
 const login = () => {
   return (
-    <div>
-      <h1>login</h1>
-    </div>
+    <LoginView/>
   )
 }
 
