@@ -1,7 +1,7 @@
 import { useSelector , useDispatch } from 'react-redux'
-import Step0 from 'views/Login/components/steps/Step0'
-import Step1 from 'views/Login/components/steps/Step1'
-import Step2 from 'views/Login/components/steps/Step2'
+import Step0 from 'views/Signup/components/steps/Step0'
+import Step1 from 'views/Signup/components/steps/Step1'
+import Step2 from 'views/Signup/components/steps/Step2'
 import { useForm } from 'react-hook-form'
 import { User } from '../../types'
 import { 
@@ -32,12 +32,10 @@ const useRegisterUI = () => {
     const step = useSelector(selectActualStepRegister)
     const dispatch = useDispatch()
 
-    const { register , handleSubmit , formState , getValues , unregister } = useForm<User>({
-        defaultValues: actualRegisterUser
+    const { register , handleSubmit , formState , getValues , unregister ,watch , control } = useForm<User>({
+        defaultValues: actualRegisterUser,
     })
     
-    const user = getValues()
-
     const handleNextStep = async ( data : User ) : Promise<void> => {
 
         dispatch(updateUserRegister({
@@ -53,9 +51,6 @@ const useRegisterUI = () => {
 
         handleNextStep(data)
     
-        console.log('paso 2');
-        console.log(data);
-        
         return data
     
     }
@@ -76,6 +71,8 @@ const useRegisterUI = () => {
         user : actualRegisterUser,
         unregister,
         register,
+        watch,
+        control,
         getValues,
         formState,
         onSubmit,

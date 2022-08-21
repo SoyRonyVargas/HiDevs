@@ -105,6 +105,13 @@ export type UserBase = {
     cover_letter: string;
 }
 
+export type Offer = {
+    
+}
+export type SearchOffers = {
+
+}
+
 export type User = {
     last_login?:        null | string | Date;
     id?:                number;
@@ -126,5 +133,7 @@ export type User = {
 }
 
 export type UserStore = Pick<User, "id" | "email" | "first_name">
+
+export type UserLogin = Pick<User, "username" | "password">
 
 type FieldsStep0 = Pick<User , "email" | "first_name" | "password">

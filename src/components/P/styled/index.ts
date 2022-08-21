@@ -31,6 +31,24 @@ export const ParagraphStyled = styled.p<Props>`
     color: ${ props => colors[props.color!] };
     font-size: ${ props => sizes[props.size!] || sizes['is-normal'] };
     line-height: 2;
+    
+    &.small
+    {
+        font-family: 'PublicaSansMedium';
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+    
+    &.small strong,
+    &.small a
+    {
+        font-family: 'PublicaSansMedium';
+        text-align: center;
+        font-weight: bold !important;
+        /* letter-spacing: .5px; */
+    }
+
     @media screen and (max-width: 480px){
         font-size: ${ props => sizesResponsive[props.size!] || sizesResponsive['is-normal'] };;
     }

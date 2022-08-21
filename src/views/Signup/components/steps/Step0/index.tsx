@@ -1,5 +1,5 @@
+import { WrapperSide } from 'views/Signup/styled'
 import React from 'react'
-import { WrapperSide } from 'views/Login/styled'
 import Form from './Form'
 import Head from './Head'
 

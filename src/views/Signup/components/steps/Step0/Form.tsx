@@ -5,7 +5,7 @@ import Button from 'components/Button'
 
 const Form = () => {
     
-    const { formState , handleSubmit , register , unregister } = useRegisterUI()
+    const { formState , user, handleSubmit , register , unregister } = useRegisterUI()
     const { handleRegister } = useAuthStore()
 
     const onSubmit = ( data : FieldsStep0 ) => {
@@ -19,6 +19,8 @@ const Form = () => {
 
     }
 
+    register("first_name", { value: "data" })
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
@@ -28,15 +30,13 @@ const Form = () => {
                         <input 
                             className="input is-medium" 
                             type="text" 
-                            required={false}
-                            placeholder="Ex. James Cameron..." 
+                            placeholder="Ex. James Cameron..."
+                            autoComplete={'disabled'}
                             {
-                                ...register('first_name', {
-                                    required: true,
-                                    shouldUnregister: false,
+                                ...register('first_name' , {
+                                    required: true
                                 })
                             }
-                            
                         />
                     </div>
                     {
@@ -51,7 +51,7 @@ const Form = () => {
                             type="email" 
                             className="input is-medium is-dangexr" 
                             placeholder="Ex. james@gmail.com" 
-                            required={false}
+                            autoComplete={'false'} 
                             {
                                 ...register('email' , {
                                     required: true

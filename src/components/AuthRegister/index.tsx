@@ -1,5 +1,5 @@
-import AnimationStep from 'views/Login/components/AnimationStep'
-import { ContainerItem } from 'views/Login/styled'
+import AnimationStep from 'views/Signup/components/AnimationStep'
+import { ContainerItem } from 'views/Signup/styled'
 import React, { FC, ReactNode } from 'react'
 import useRegisterUI from 'hooks/useRegisterUI'
 import MainImage from './components/MainImage'

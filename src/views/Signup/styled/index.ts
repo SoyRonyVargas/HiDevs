@@ -50,5 +50,16 @@ export const ContainerItem = styled.article`
     {
         width: 100%;
     }
+    @media screen and (max-width: 1024px)
+    {
+        &:first-child
+        {
+            display: none;
+        }
+        &:last-child
+        {
+            width: 100%;
+        }
+    }
 `
 

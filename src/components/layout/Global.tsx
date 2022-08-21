@@ -10,7 +10,7 @@ type Props = {
 
 const GlobalLayout: FC<Props> = ({ children }) => {
 
-  const { show } = useNavbar()
+  const { show , position , background } = useNavbar()
 
   return (
     <LayoutGlobalStyled>
@@ -21,10 +21,11 @@ const GlobalLayout: FC<Props> = ({ children }) => {
         <>
         <NavbarMobile />
 
-    <Navbar
-      typed='normal'
-      color='transparent'
-    />
+        <Navbar
+          typed={position}
+          color={background}
+        />
+        
         </>
       }
 

@@ -15,4 +15,4 @@ export type NavLink = {
     to: string
 }
 
-type TypePosition = "normal" | "static"
+export type TypePosition = "normal" | "static"

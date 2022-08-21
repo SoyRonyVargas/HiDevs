@@ -1,22 +1,26 @@
-import AnimationStep from './components/AnimationStep'
-import AuthRegister from 'components/AuthRegister'
-import useRegisterUI from 'hooks/useRegisterUI'
+import { ContainerChildrens, ContainerView } from 'components/AuthRegister/styled'
+import MainImage from 'components/AuthRegister/components/MainImage'
+import Head from 'views/Signup/components/steps/Step0/Head'
+import { ContainerItem } from 'views/Signup/styled'
 import React from 'react'
+import Form from './components/Form'
 
 const LoginView = () => {
-
-  const { step , steps } = useRegisterUI()
-
   return (
-    <AuthRegister>
-      {
-        steps.map( ( { component : Component } , index) => 
-          <AnimationStep step={step} key={`render-register-${index}`} show={index === step}>
-            <Component/>
-          </AnimationStep>
-        )
-      }
-    </AuthRegister>
+    <ContainerView>
+        <ContainerItem>
+          <MainImage/>
+        </ContainerItem>
+        <ContainerItem>
+          <ContainerChildrens>
+            <Head
+              title='Sign in'
+              description='Welcome back! Be brave, be strong'
+            />
+            <Form/>
+          </ContainerChildrens>
+        </ContainerItem>
+    </ContainerView>
   )
 }
 

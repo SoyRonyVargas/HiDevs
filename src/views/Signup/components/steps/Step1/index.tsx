@@ -1,11 +1,16 @@
-import { ContainerStepStyled } from 'views/Login/styled'
+import { ContainerStepStyled } from 'views/Signup/styled'
 import useRegisterUI from 'hooks/useRegisterUI'
 import React from 'react'
 import Title from 'components/Title'
+import { Controller } from 'react-hook-form'
 
 const Step1 = () => {
 
-  const { register , formState , user , onSubmit } = useRegisterUI()
+  const { register , formState , user , onSubmit , control } = useRegisterUI()
+
+  const { ref , name ,  } = register('first_name', {
+    value: 'xxx'
+  })
 
   return (
     <ContainerStepStyled onSubmit={onSubmit}>
@@ -19,28 +24,22 @@ const Step1 = () => {
 
     {/* <pre>
       {
-        JSON.stringify( user ,null , 3 )
+        JSON.stringify( formState.touchedFields ,null , 3 )
       }
     </pre> */}
 
       <div className="field">
-        <label className="label">First Name</label>
+        
+        <label className="label">First Name </label>
+
         <div className="control">
           <input
             className="input"
             type="text"
             placeholder="Your name..."
-            // value={user.first_name}
-            {
-              ...register('phone_number', {
-                value: 'user.first_name',
-                // required: true,
-                // shouldUnregister: true,
-                // setValueAs: ( value ) => {
-                //   return value
-                // }
-              })
-            }
+            autoComplete={'disabled'} 
+            value={user.first_name}
+            disabled
           />
           { 
             formState.errors.first_name
@@ -56,6 +55,8 @@ const Step1 = () => {
           <input
             className="input"
             type="text"
+            autoComplete={'disabled'} 
+            defaultValue={user.first_name}
             placeholder="Your last name..."
             {
               ...register('last_name', {
@@ -73,6 +74,7 @@ const Step1 = () => {
           <input 
             className="input ixs-success" 
             placeholder="Ex. Serbrylex" 
+            autoComplete={'disabled'} 
             type="text" 
             {
               ...register('username', {
@@ -109,9 +111,13 @@ const Step1 = () => {
       </div>
       
       <div className="field">
-        <label className="label">Message</label>
+        <label className="label">Description</label>
         <div className="control">
-          <textarea className="textarea" placeholder="Textarea" defaultValue={""} />
+          <textarea 
+            className="textarea" 
+            placeholder="Textarea" 
+            defaultValue={""} 
+          />
         </div>
       </div>
       
