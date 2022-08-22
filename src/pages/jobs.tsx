@@ -1,10 +1,11 @@
+import PrivateRoute from 'components/Auth/PrivateRoute'
 import JobsView from 'views/Jobs'
 import React from 'react'
 
-const jobs = () => {
+const JobsPage = () => {
   return (
     <JobsView/>
   )
 }
 
-export default jobs
+export default PrivateRoute(JobsPage)

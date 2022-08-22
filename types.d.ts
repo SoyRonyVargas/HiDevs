@@ -1,4 +1,20 @@
 import { StaticImageData } from 'next'
+import { AppContext } from 'next/app';
+
+declare global {
+    namespace React {
+        interface FunctionComponent<P = {}> {
+            getInitialProps( appContext: AppContext ): Promise<any>;
+        }
+    }
+    namespace Hidevs {
+        
+    }
+}
+
+type PageProps = {
+    validate: boolean
+}
 
 export type ThunkFunction = (
     ( dispatch : AppDispatch , getState: () => RootState ) => Promise<void>
@@ -90,7 +106,7 @@ export type Post = {
 // 
 
 export type UserAuthResponse = {
-    user:         User;
+    user:         UserBase;
     access_token: string;
 }
 
@@ -114,7 +130,7 @@ export type SearchOffers = {
 
 export type User = {
     last_login?:        null | string | Date;
-    id?:                number;
+    id?:                number | string;
     password:          string;
     email:             string;
     is_superuser:      boolean;

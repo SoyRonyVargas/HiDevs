@@ -2,7 +2,6 @@ import { setLoading , hideLoading , selectLoadingAuth } from 'store/auth/authSli
 import { useDispatch , useSelector } from 'react-redux'
 import type { FieldsStep0, User } from '../../types'
 import useRegisterUI from './useRegisterUI'
-import { signIn } from "next-auth/react"
 
 const useAuthStore = () => {
 
@@ -35,10 +34,7 @@ const useAuthStore = () => {
 
   const handleLogin = async () => {
 
-    const response = await signIn('credentials', {
-      email: ''
-    })
-
+   
   }
 
   return {

@@ -1,4 +1,3 @@
-import { useSession  } from "next-auth/react"
 import useLoginUI from 'hooks/useLoginUI'
 import React, { useEffect } from 'react'
 import Button from 'components/Button'
@@ -7,22 +6,19 @@ import Link from 'next/link'
 
 const Form = () => {
 
-    const { data ,status } = useSession()
-    const { register , onSubmit } = useLoginUI()
+    const { register , onSubmit , loading , errorAuth } = useLoginUI()
 
     return (
         <form onSubmit={onSubmit}>
-            <h1> status { status } </h1>
-            {/* <h1> user { data?.user. } </h1> */}
-        {/* // <form> */}
+          
             <div>
                 <div className="field">
                     <label className="label">Email</label>
                     <div className="control has-icons-left has-icons-right">
                         <input
-                            type="text"
+                            type="email"
                             className="input is-medium is-dangexr"
-                            placeholder="Your username..."
+                            placeholder="Your email..."
                             autoComplete={'false'}
                             {
                                 ...register('username', {
@@ -42,7 +38,16 @@ const Form = () => {
                 <div className="field">
                     <label className="label">Password</label>
                     <div className="control has-icons-left has-icons-right">
-                        <input className="input is-medium is-dangexr" type="password" placeholder="Your password..." />
+                        <input 
+                            className="input is-medium is-dangexr" 
+                            type="password" 
+                            placeholder="Your password..." 
+                            {
+                                ...register('password', {
+                                    required: true
+                                })
+                            }
+                        />
                         <span className="icon is-small is-left">
                             <i className="fas fa-lock" />
                         </span>
@@ -52,13 +57,21 @@ const Form = () => {
                     </div>
                     {/* <p className="help is-danger">This email is invalid</p> */}
                 </div>
+                
+                {
+                    errorAuth &&
+                    <div className="notification is-danger is-light mb-3">
+                       {errorAuth}
+                    </div>
+                }
+                
                 <div className="field is-grouped">
                     <div className="control w-100">
                         <Button
                             type_button='primary'
                             title='Login'
                             size='is-medium'
-                            className='w-100'
+                            className={`${ loading ? "is-loading" : ""} w-100`}
                         />
                     </div>
                 </div>

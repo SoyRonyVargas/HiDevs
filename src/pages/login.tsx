@@ -7,6 +7,5 @@ const login = () => {
   )
 }
 
-login.auth = false
 
 export default login

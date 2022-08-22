@@ -4,11 +4,12 @@ import NewsletterView from 'views/Home/Newsletter'
 import StatisticsView from 'views/Home/Statistics'
 import ChooseHomeView from 'views/Home/Choose'
 import PricingView from 'views/Home/Pricing'
+import type { GetStaticProps } from 'next'
 import OffersView from 'views/Home/Offers'
 import HomeHeroView from 'views/Home/Hero'
-import type { NextPage } from 'next'
+import { PageProps } from '../../types'
 
-const Home: NextPage = ( props ) => {
+const Home = () => {
   return (
     <>
      <HomeHeroView />

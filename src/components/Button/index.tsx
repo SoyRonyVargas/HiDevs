@@ -22,7 +22,7 @@ const Button = (props: Props) => {
             {...updateProps}
             // type_button={type!}
             type="submit"
-            className={classNameMemoized} 
+            className={`${classNameMemoized}`} 
         >
             {
                 title

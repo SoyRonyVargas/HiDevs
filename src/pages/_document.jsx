@@ -53,9 +53,9 @@ MyDocument.getInitialProps = async (ctx) => {
   // However, be aware that it can have global side effects.
 
   /* eslint-disable */
-  ctx.renderPage = () =>
+    ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) => (props) =>
+      enhanceApp: (App) => (props) =>
         <App {...props} />,
     });
   /* eslint-enable */

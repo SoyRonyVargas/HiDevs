@@ -18,7 +18,7 @@ const ListLinks = ( { showIcon = false } : Props ) => {
         },
         {
             title: "Jobs",
-            to: "/",
+            to: "/jobs",
             icon: 'fa-briefcase'
         },
         {

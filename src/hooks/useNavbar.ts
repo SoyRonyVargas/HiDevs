@@ -23,8 +23,6 @@ const useNavbar = () => {
 
         const path = router.pathname
 
-        console.log(routes.includes(path));
-
         setShow(!routes.includes(path))
         
         const pos : TypePosition = routesPosition.includes(path) ? 'static' : 'normal'

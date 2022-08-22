@@ -1,62 +1,40 @@
+import ProviderAuth from 'components/Auth/ProviderAuth'
+import type { AppContext, AppProps } from 'next/app'
 import GlobalLayout from 'components/layout/Global'
-import { SessionProvider } from "next-auth/react"
-import { useSession } from 'next-auth/react'
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+import { PageProps } from '../../types'
 import { Provider } from 'react-redux'
-import { Session } from 'next-auth'
+import { NextPageContext } from 'next'
 import 'bulma/css/bulma.min.css'
 import '../styles/globals.css'
 import { store } from 'store'
-import { ReactNode } from 'react'
-type Props = AppProps<{s : string}> & {
-  session: Session
-  Component: any
+import App from 'next/app'
+import { FC } from 'react'
+
+type Props = AppProps<PageProps> & {
+  getInitialProps?: (ctx: NextPageContext) => Promise<any>
 }
 
-const MyApp: React.FunctionComponent<Props> = (props) => {
+const MyApp: FC<Props> = (props) => {
   
-  const { Component, pageProps , session } = props;
+  const { Component, pageProps } = props;
 
   return (
-    <SessionProvider session={session}>
       <Provider store={store}>
-        <GlobalLayout>
-          {
-            Component.auth 
-            ?
-            <Auth>
+        <ProviderAuth>
+          <GlobalLayout>
               <Component {...pageProps} />
-            </Auth>
-            :
-            <Component {...pageProps} />
-          }
-        </GlobalLayout>
+          </GlobalLayout>
+        </ProviderAuth>
       </Provider>
-    </SessionProvider>
   );
 };
 
-function Auth({ children } : { children? : ReactNode} ) : any {
-
-  const router = useRouter()
-
-  const { status } = useSession()
-
-  if (status === "loading") {
-    return <div>Loading...</div>
-  }
-
-  if( status === "unauthenticated" ){
-
-    router.push('/')
-
-    return null
-
-  }
-
-  return children
+MyApp.getInitialProps = async ( appContext : AppContext ) => {
   
+  const appProps = await App.getInitialProps(appContext);
+
+  return { ...appProps }
+
 }
 
 export default MyApp
