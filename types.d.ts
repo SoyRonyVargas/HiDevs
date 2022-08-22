@@ -4,7 +4,7 @@ import { AppContext } from 'next/app';
 declare global {
     namespace React {
         interface FunctionComponent<P = {}> {
-            getInitialProps( appContext: AppContext ): Promise<any>;
+            getInitialProps?( appContext: AppContext ): Promise<any>;
         }
     }
     namespace Hidevs {
