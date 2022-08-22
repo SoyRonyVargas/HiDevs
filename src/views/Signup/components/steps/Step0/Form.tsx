@@ -2,14 +2,21 @@ import { FieldsStep0 } from "../../../../../../types"
 import useRegisterUI from "hooks/useRegisterUI"
 import useAuthStore from "hooks/useAuthStore"
 import Button from 'components/Button'
+import { useDispatch } from "react-redux"
+import { updateUserRegister } from "store/auth/authSlice"
 
 const Form = () => {
     
-    const { formState , user, handleSubmit , register , unregister } = useRegisterUI()
-    const { handleRegister } = useAuthStore()
+    const { formState , user, handleSubmit , register } = useRegisterUI()
+    const { handleRegister , loading } = useAuthStore()
+    const dispatch = useDispatch()
 
     const onSubmit = ( data : FieldsStep0 ) => {
 
+        dispatch(updateUserRegister({
+            ...user,
+            ...data
+        }))
         console.log(data);
         console.log(formState.errors.first_name);
         console.log(formState.errors.email);
@@ -86,7 +93,7 @@ const Form = () => {
                             type_button='primary'
                             title='Register'
                             size='is-normal'
-                            className='w-100'
+                            className={`'w-100'${ loading ? "is-loading" : ""}`}
                         />
                     </div>
                 </div>

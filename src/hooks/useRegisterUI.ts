@@ -34,6 +34,7 @@ const useRegisterUI = () => {
 
     const { register , handleSubmit , formState , getValues , unregister ,watch , control } = useForm<User>({
         defaultValues: actualRegisterUser,
+        mode: "onSubmit",
     })
     
     const handleNextStep = async ( data : User ) : Promise<void> => {
@@ -48,6 +49,11 @@ const useRegisterUI = () => {
     }
 
     const onSubmitNext = ( data : User ) => {
+
+        dispatch(updateUserRegister({
+            ...actualRegisterUser,
+            ...data
+        }))
 
         handleNextStep(data)
     
