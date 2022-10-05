@@ -39,6 +39,7 @@ const Form = () => {
                             type="text" 
                             placeholder="Ex. James Cameron..."
                             autoComplete={'disabled'}
+                            data-test-id="form-input-name-register"
                             {
                                 ...register('first_name' , {
                                     required: true
@@ -59,6 +60,7 @@ const Form = () => {
                             className="input is-medium is-dangexr" 
                             placeholder="Ex. james@gmail.com" 
                             autoComplete={'false'} 
+                            data-test-id="form-input-email-register"
                             {
                                 ...register('email' , {
                                     required: true
@@ -77,7 +79,12 @@ const Form = () => {
                 <div className="field">
                     <label className="label">Password</label>
                     <div className="control has-icons-left has-icons-right">
-                        <input className="input is-medium is-dangexr" type="password" placeholder="Your password..." />
+                        <input 
+                            data-test-id="form-input-password-register"
+                            className="input is-medium is-dangexr" 
+                            placeholder="Your password..." 
+                            type="password" 
+                        />
                         <span className="icon is-small is-left">
                             <i className="fas fa-lock" />
                         </span>
@@ -90,6 +97,7 @@ const Form = () => {
                 <div className="field is-grouped">
                     <div className="control w-100">
                         <Button
+                            testid="form-button-submit-register"
                             type_button='primary'
                             title='Register'
                             size='is-normal'

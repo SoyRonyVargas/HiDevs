@@ -20,10 +20,12 @@ const useAuthStore = () => {
 
       dispatch(setLoading())
 
-      debugger
-
-      const { data } = await ApiInstance.post('/signup/', user)
+      // const { data } = await ApiInstance.post('/signup/', user)
       
+      const data : any = {
+          ...user
+      }
+
       dispatch(hideLoading())
       
       handleNextStep(data as User)

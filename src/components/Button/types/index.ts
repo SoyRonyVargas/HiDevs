@@ -6,5 +6,6 @@ export type Props = GenericTextProps & {
     size?: Sizes
     to?: string
     close_nav?: boolean
+    testid? : string
 }
 

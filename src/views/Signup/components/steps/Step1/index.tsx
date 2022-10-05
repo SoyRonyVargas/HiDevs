@@ -1,4 +1,4 @@
-import { ContainerStepStyled } from 'views/Signup/styled'
+  import { ContainerStepStyled } from 'views/Signup/styled'
 import useRegisterUI from 'hooks/useRegisterUI'
 import React from 'react'
 import Title from 'components/Title'
@@ -34,12 +34,12 @@ const Step1 = () => {
 
         <div className="control">
           <input
-            className="input"
-            type="text"
-            placeholder="Your name..."
-            autoComplete={'disabled'} 
-            value={user.first_name}
             disabled
+            type="text"
+            className="input"
+            value={user.first_name}
+            autoComplete={'disabled'} 
+            placeholder="Your name..."
           />
           { 
             formState.errors.first_name
@@ -53,11 +53,12 @@ const Step1 = () => {
         <label className="label">Last Name</label>
         <div className="control">
           <input
-            className="input"
             type="text"
+            className="input"
             autoComplete={'disabled'} 
             defaultValue={user.first_name}
             placeholder="Your last name..."
+            data-test-id="form-input-last-name-register"
             {
               ...register('last_name', {
                   required: 'Entreaaa',
@@ -76,6 +77,7 @@ const Step1 = () => {
             placeholder="Ex. Serbrylex" 
             autoComplete={'disabled'} 
             type="text" 
+            data-test-id="form-input-username-register"
             {
               ...register('username', {
                   required: 'Entreaaa',
@@ -103,6 +105,7 @@ const Step1 = () => {
             placeholder="Email input" 
             disabled
             value={user.email}
+            
           />
           <span className="icon is-small is-left">
             <i className="fas fa-envelope" />
@@ -117,13 +120,17 @@ const Step1 = () => {
             className="textarea" 
             placeholder="Textarea" 
             defaultValue={""} 
+            data-test-id="form-input-description-register"
           />
         </div>
       </div>
       
       <div className="field is-grouped">
         <div className="control">
-          <button className="button is-link">Submit</button>
+          <button 
+            className="button is-link"
+            data-test-id="form-input-continue-1-register"
+          >Submit</button>
         </div>
         <div className="control">
           <button className="button is-link is-light">Cancel</button>

@@ -27,8 +27,6 @@ const useSession = () => {
 
     const getUser = async () => {
 
-        console.log('no lo busco');
-
         if( !token ) {
 
             dispatch(hideLoadingUser())
@@ -36,8 +34,6 @@ const useSession = () => {
             return
 
         }
-
-        console.log('paso');
 
         try
         {
@@ -68,7 +64,9 @@ const useSession = () => {
 
             dispatch(setLoading())
 
-            const { data } = await ApiInstance.post<UserAuthResponse>(`/login/` , user)
+            // const { data } = await ApiInstance.post<UserAuthResponse>(`/login/` , user)
+
+            const data : any = {}
 
             setTokenLocal(data.access_token)
 
